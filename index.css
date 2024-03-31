@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#product-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#card{
+    padding: 10px;
+    background-color: #f2f2f2;
+    max-width: 210px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#add-to-cart {
+    background-color: dodgerblue;
+    padding: 10px;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
