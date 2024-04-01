@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.product-img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.descriptions {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.descriptions button {
+    background-color: dodgerblue;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+
+.descriptions button:hover{
+    background-color: rgb(25, 127, 229);
+}

@@ -6,7 +6,7 @@ window.onload = ()=>{
 }
 
 async function fetchProducts(){
-    const data = await fetch('http://localhost:300/products/all-products', {
+    const data = await fetch('https://fakestoreapi.com/products', {
         method: 'GET'
     })
 
@@ -14,7 +14,7 @@ async function fetchProducts(){
 
     console.log(products);
 
-    products.products.forEach(product => productArr.push(product))
+    products.forEach(product => productArr.push(product))
 
     displayProducts();
 }
@@ -25,27 +25,28 @@ function displayProducts(){
         card.id = 'card';
         
         let image = document.createElement('img');
-        image.src = product.productImage
+        image.src = product.image
         image.id = 'product-img'
 
         let title = document.createElement('h2');
         title.className = 'title'
-        title.textContent = product.productName
+        title.textContent = product.title
 
-        let desc = document.createElement('p')
-        desc.className = "description";
-        desc.textContent = product.description
+        // let desc = document.createElement('p')
+        // desc.className = "description";
+        // desc.textContent = product.description
 
         let addToCartBtn = document.createElement('button');
         addToCartBtn.id = 'add-to-cart';
         addToCartBtn.textContent = 'View item';
         addToCartBtn.addEventListener('click', ()=>{
-            window.location.href = `singleproduct/${product.productId}`
+            console.log(product);
+            window.location.href = 'singleproduct.html?id=' + `${product.id}`
         })
 
         card.appendChild(image);
         card.appendChild(title);
-        card.appendChild(desc);
+        // card.appendChild(desc);
         card.appendChild(addToCartBtn);
 
         container.appendChild(card);
