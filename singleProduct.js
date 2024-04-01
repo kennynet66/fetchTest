@@ -19,6 +19,9 @@ async function getSingleProduct(){
     let descrs = document.createElement('div');
     descrs.className = 'descriptions';
 
+    let price = document.createElement('h1');
+    price.textContent = `$${product.price}`
+
     let title = document.createElement('h1');
     title.textContent = product.title;
 
@@ -30,6 +33,7 @@ async function getSingleProduct(){
 
     descrs.appendChild(title);
     descrs.appendChild(descr);
+    descrs.appendChild(price);
     descrs.appendChild(button);
 
     container.appendChild(image);
